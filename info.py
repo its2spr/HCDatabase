@@ -42,14 +42,7 @@ SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'HombaleCinemasChat')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "True")), False)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), False)
-CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", 
-FILE : <code>{file_name}</code>
-CAPTION: {file_caption}
-
-
-<b>JOIN & SUPPORT @HombaleCinemas</b>
-
-Size : <i>{file_size}</i>)
+CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "<b>File: <code>{file_name}</code>\n</b><b>CAPTION: {file_caption}\n\n</b><b>JOIN & SUPPORT @HombaleCinemas\n\n</b> Size : <i>{file_size}</i>")
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", CUSTOM_FILE_CAPTION)
 IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "<b>IMDb Data:\n\n🏷</b> <b>Title:</b> <a href={url}>{title}</a>\n🎭 <b>Genres:</b> {genres}\n📆 <b>Year:</b> <a href={url}/releaseinfo>{year}</a>\n🌟 <b>Rating:</b> <a href={url}/ratings>{rating}</a> / 10\n\n <b>JOIN & SUPPORT {message.chat.title}</b>")
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), False)
